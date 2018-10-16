@@ -3,26 +3,57 @@
 <head>
     <meta charset="utf-8" />
     <title>Digital Signature Pad</title>
+    <style>
+
+
+
+
+
+
+
+
+
+        .my {
+            width: 500px;
+            height: auto;
+            background: #2a2a2a;
+            color: #fff;
+            border: 1px dashed maroon;
+            margin: 40px 20px 40px 30%;
+        }
+    </style>
 </head>
 <body>
-    <div style="width: 360px; height: auto; margin: 50px auto; padding: 20px 0; background: #2a2a2a; color: #fff; ">
+    <div class="my">
         <div>
             <p style="text-align: center">Click and Draw Your Signature</p>
         </div>
-        <div class="sig sigWrapper">
-            <canvas class="pad" height="70" width="280"></canvas>
-            <input type="hidden" class="output" />
+        <form class="sig-form">
+            <div class="sig sigWrapper">
+                <canvas class="pad" height="100" width="350" style="margin-left: 10%"></canvas>
+                <input type="hidden" class="output" />
+            </div>
+            <div id="submit">
+                <button type="submit">submit signature</button>
+            </div>
+            <div id="clear">
+                <button name="clear" type="clear" class="clear">Clear Signature</button>
+            </div>
+            <div style="clear: both"></div>
+        </form>
+    </div>
+    <div style="width: 350px; height: auto; margin: 50px auto; padding: 20px 0; background: #2a2a2a; color: #fff;">
+        <div class="signed">
+            <div class="signWrapper">
+                <canvas class="pad-id" height="90" width="275"></canvas>
+            </div>
+            <button type="button" name="get" id="get">Get Signature</button>
         </div>
-        <div id="submit">
-            <button type="submit">submit signature</button>
-        </div>
-        <div id="clear">
-            <button name="clear" type="clear" class="clear">Clear Signature</button>
-        </div>
-        <div style="clear: both"></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="Content/flashcanvas.js"></script>
-
+    <script src="Content/json2.min.js"></script>
+    <script src="Content/jquery.signaturepad.min.js"></script>
+    <script src="Content/signaturepad.js"></script>
 </body>
 </html>
